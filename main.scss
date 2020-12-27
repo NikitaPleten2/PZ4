@@ -1,0 +1,280 @@
+@import "variables";
+@import "mixins";
+*{
+    margin:0px;
+    padding:0px;
+}
+a{
+    text-decoration: none;
+}
+li{
+    text-decoration:none;
+    list-style:none;
+}
+body{
+    font-family: $fnt;
+    background:$light;
+}
+.logo{
+    background: map-get($col,"main");
+    width: 100%;
+    height: 120px;
+    display: flex;
+}
+.log1{
+width: 1%;
+padding-top: 17px;
+padding-left: 110px;
+transition: all 0.2s ease;
+&:hover{
+    padding-top: 25px;
+    transition: all 0.2s ease;
+    }
+}
+.log2{
+    margin-top: 30px;
+    margin-left:500px;
+    padding-right: 150px;
+    color:$dark;
+    font-size: 25px;
+    overflow: hidden; 
+    white-space: nowrap; 
+ a{
+    color: #ffff;
+    text-shadow: black 0 0 3px;
+    }
+}
+    .log3{
+        padding-right: 150px;
+        color:$dark;
+        font-size: 15px;
+        cursor: pointer;
+        margin-top: 39px;
+        a{
+            text-shadow: black 0 0 2px;
+            font-size: 30px;
+            color: #ffff;
+        }
+    }
+        .log4{
+         text-align: center;
+         height: 120px;
+         line-height: 40px;
+         font-size: 20px;
+         text-shadow: black 0 0 1px;
+         color:$dark;
+         margin: auto;
+        a{
+            color: #000;
+        }
+    }
+            .log4a a{
+                @include log44;
+            }
+            .log4b a{
+                @include log44;
+            }
+    nav{
+        margin:50px;
+        padding-right: 180px;
+    }
+    .topnav{
+        background-color: #ededeb;
+        display: flex;
+        justify-content: space-around;
+     a{
+        color:$dark;
+        font-size: 30px;
+        transition: all 0.4s ease;
+    &:hover{
+        border-bottom: 4px solid #000;
+        transition: all 0.3s ease;
+        color: #ffff;
+        text-shadow: black 0 0 3px;
+        background: map-get($col,"main");
+        }
+    }
+}
+    .img{
+        width: 100%;
+        max-width: 100%;
+        filter: alpha(Opacity=90); 
+        opacity: 0.90;
+    }
+    
+    .vis{
+        margin-top: 20px;
+        margin-left: 160px;
+        width: 45%;
+        color: map-get($col,"main");
+        text-shadow: black 0 0 3px;
+        text-align: left;
+        font-size: 50px;
+    }
+    .tele
+    {
+        width: 40%;
+        height: 300px;
+        margin-left:110px;
+        padding-left: 20px;
+        background: $mdark;
+        color: #ffff;
+        text-shadow: black 0 0 2px;
+        text-align: left;
+        font-size: 25px;
+        line-height: 70px;
+    }
+    
+    .lupa{
+    position: absolute;
+    margin-left: 1735px;
+    margin-top: -363px;
+    float: left;
+    }
+    .lupawh{
+        width: 30px;
+        height: 30px;
+    &:hover{
+    padding-left: 5px;
+    padding-top: 3px;
+    transition: all 0.25s ease;
+    }
+}
+    .search1{
+        color:$mdark;
+        margin-top:-370px ;
+        float: left;
+        margin-left: 970px;
+        height:370px;
+    }
+    input {
+        @include search;
+        color:$dark;
+        background: none;
+        font-size: 20px;
+       }
+    .search {
+        @include search;
+        color:$mdark;
+        border: 4px solid #000; 
+    }
+    .map {
+        width: 800px;
+        height: 245px;
+    }
+    .vib{
+        float: left;
+        margin-top: 100px;
+        margin-left: 100px;
+        color: $yel-col;
+        text-shadow: black 0 0 2px;
+        font-size: 30px;
+    }
+    .vibor{
+        margin-bottom: 400px;
+        width:700px;
+        padding-left: 20px;
+        margin-top: 30px;
+        margin-left:280px ;
+        float: left;
+        font-size: 40px;
+        line-height: 100px;
+        height: 300px;
+        li ul{
+            text-align: right;
+            display: none;
+            margin-top: -110px;
+            font-size: 30px;
+            line-height: 50px;
+            right: 780px;
+            @extend %vib;
+            li ul { 
+                text-align: center;
+                @extend %vib;
+                 margin-top:-70px;
+                 left: 300px;
+             }
+        }
+        ul li ul a{
+            border-bottom: 1px solid $mdark;
+        }
+    ul li a{
+        color:#3e3e3e;
+        transition: all 0.3s ease;
+    &:hover{
+    transition: all 0.2s ease;
+    background: $yel-col;
+    box-shadow: 1px 5px 10px -5px black;
+    }
+}
+    li:hover>ul{
+        transition: all 0.5s ease;
+        display: block;
+    }
+}
+    .zakaz{
+        float: left;
+        padding-top: 450px;
+        font-size: 70px; 
+    a{ 
+        background: #85f6ad;
+        color: #ffff;
+        transition: all 0.25s ease;
+        padding: 30px;
+        &:hover{
+            font-size:80px;
+            transition: all 0.25s ease;
+        }
+    }
+}
+    table{
+        width: 1600px;
+        text-align: center;
+        font-size: 18px;
+        margin-left: 120px;
+        height: 400px;
+    td{
+        padding-left: 50px;
+    }
+}
+    .ssilki{
+        transition: all 0.25s ease;
+        width: 100px;
+        height: 100px;
+        align-content: center;
+        &:hover{
+        padding: 10px ;
+        transition: all 0.25s ease;
+    }
+}
+    .bottom{ 
+        background: $mdark;
+        width: 100%;
+        height: 300px;
+        display: flex;
+        margin-top: 130px;
+    }
+        .bot{
+            float: left;
+            padding-left: 100px;
+            @extend %bots;
+        }
+        .bot1{
+            text-align: center;
+            @extend %bots;
+            a {
+            color: black;
+            transition: all 0.25s ease;
+            &:hover {
+            transition: all 0.25s ease;
+            font-size: 50px;
+        }
+    }
+}
+        .bot2 h3{ 
+            float: left;
+            width: 400px;
+            margin-right: 250px;
+            text-align: right;
+            @extend %bots;
+        }
